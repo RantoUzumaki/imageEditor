@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "Moon";
+  src: url("./Assets/Fonts/MoonLight.otf");
+  src: url("./Assets/Fonts/MoonBold.otf");
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("./Assets/Fonts/bold.otf");
+  src: url("./Assets/Fonts/light.otf");
+  src: url("./Assets/Fonts/medium.otf");
+  src: url("./Assets/Fonts/regular.otf");
+  src: url("./Assets/Fonts/semibold.otf");
+  src: url("./Assets/Fonts/thin.otf");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Manrope";
+  box-sizing: border-box;
+}
+
+body {
+  @apply w-screen h-screen overflow-x-hidden overflow-y-auto flex justify-center items-center m-0 p-0 text-black/[0.8];
+}
+
+#root {
+  @apply w-screen h-screen overflow-x-hidden overflow-y-auto flex justify-center items-center;
+}
+
+.container {
+  @apply bg-white w-screen h-max p-8 flex flex-col gap-6;
+}
+
+.headerText {
+  @apply p-0 m-0 text-xl font-extrabold;
+}
+
+.card {
+  @apply w-full h-max flex flex-col gap-6;
+}
+
+.imageCard {
+  @apply w-full h-max p-5 border border-gray-200 rounded-lg;
+}
+
+.imageCard svg {
+  @apply w-full h-max;
+}
+
+.filterCard {
+  @apply w-full h-max p-5 border border-gray-200 rounded-lg;
+}
+
+.filterText {
+  @apply text-base font-bold font-['Moon'] pb-2;
+}
+
+.filterBtns {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.filterBtns button {
+  @apply w-full font-['Moon'] py-4 border border-gray-400 rounded;
+}
+
+.filterBtns button:hover,
+.filterBtns button.active {
+  @apply bg-blue-500 text-white border-blue-500 transition-all;
+}
+
+.scaleContainer {
+  @apply py-6 flex flex-col;
+}
+
+.scaleContainer div {
+  @apply flex items-center justify-between font-['Moon'];
+}
+
+.scaleText,
+.scalePercentage {
+  @apply font-['Moon'] text-gray-500;
+}
+
+.changerBtns {
+  @apply grid grid-cols-4 gap-4;
+}
+
+.changerBtns button {
+  @apply w-full font-['Moon'] aspect-square border border-gray-400 rounded flex items-center justify-center text-4xl;
+}
+
+.changerBtns button:hover {
+  @apply bg-blue-500 text-white border-blue-500 transition-all;
+}
+
+.footer {
+  @apply flex justify-start items-start flex-col gap-4;
+}
+
+.footer .left button {
+  @apply font-['Moon'] py-4 px-8 border border-gray-400 rounded;
+}
+
+.footer .left button:hover,
+.footer .left button.active {
+  @apply bg-blue-500 text-white border-blue-500 transition-all;
+}
+
+.footer .right {
+  @apply flex justify-end gap-4 items-center;
+}
+
+.footer .right button {
+  @apply font-['Moon'] py-4 px-8 border bg-blue-500 text-white border-blue-500 rounded;
+}
+
+.footer .right button:hover,
+.footer .right button.active {
+  @apply bg-blue-700 border-blue-700 transition-all;
+}
+
+.imagePicker {
+  @apply relative cursor-pointer;
+}
+
+.imagePicker label {
+  @apply relative z-0 inline-block py-4 px-8 cursor-pointer bg-gray-500 text-white rounded;
+}
+
+.imagePicker:hover label {
+  @apply bg-gray-700 transition-all;
+}
+
+.imagePicker input {
+  @apply inline-block absolute z-[1] w-full h-full top-0 left-0 right-0 bottom-0 opacity-0 cursor-pointer;
+}
+
+.imagePicker input::-webkit-file-upload-button {
+  @apply hidden;
+}
