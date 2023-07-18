@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 
-Container.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export default function Container({ children }) {
+export default function Container({ className, children }) {
   return (
     <>
-      <div className="container">{children}</div>
+      <div className={className}>{children}</div>
     </>
   );
 }
+
+Container.propTypes = {
+  className: PropTypes.any,
+  children: PropTypes.any,
+};
